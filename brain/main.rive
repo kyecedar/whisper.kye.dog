@@ -31,7 +31,7 @@
 
 
 ! array recallname = as i remember, it was|it was|you are
-+ what is my name
++ what is my name [again]
 * <call>recall name</call> != undefined => (@recallname) <call>recall name</call>.
 - i don't think you've told me.
 - i do not recall you telling me.
@@ -41,8 +41,19 @@
 - try that somewhere else.
 - no thank you.
 - no clue.
-* <call>recall name</call> != undefined => you're <call>recall name</call>.
+//* <call>recall name</call> != undefined => you're <call>recall name</call>.
 
+
+
+// self.
++ you are
+@ who are you
+
++ who are you
+- whisper. rivescript chat bot. extension of kye's personality and brain.
+
++ where are you
+- i am hosted on your browser. none of the queries you have typed are being sent anywhere but here.
 
 
 

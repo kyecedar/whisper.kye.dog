@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" type="text/css" href="./css/reset.css">
-  <link rel="stylesheet" type="text/css" href="./css/global.css">
   <link rel="stylesheet" type="text/css" href="./css/index.css">
 
   <script src="./js/rivescript.min.js"></script>
@@ -17,22 +16,49 @@
 <body>
   <main>
     <div id="replies"></div>
-    <form onsubmit="return handleInput()">
-      <input type="text" name="input" id="user-input">
-      <input type="submit" value="query.">
+    <form id="visitor-input-form" onsubmit="return handleInput()">
+      <input type="submit" value="query" id="visitor-input-submit" disabled>
+      <div class="separator">\</div>
+      <input type="text" name="input" id="visitor-input" autocomplete="off" disabled>
     </form>
   </main>
 
   <script src="./js/whisper.js"></script>
 
   <script>
-    Whisper.init();
+    /** @type {HTMLInputElement} */
+    const input = document.getElementById("visitor-input");
+    /** @type {HTMLInputElement} */
+    const submit = document.getElementById("visitor-input-submit");
 
-    /** @type { */
-    const inputfield = document.getElementById("user-input");
+    input.value = "";
+
+    const onready = () => {
+      // enable input form when loaded.
+      input.disabled = false;
+      submit.disabled = false;
+    };
+
+    Whisper.init(onready);
+
+    const tempAddReply = (text) => {
+      let reply = document.createElement("div");
+      reply.classList.add("reply");
+      reply.innerText = text;
+
+      elem_replies.append(reply);
+    };
 
     function handleInput() {
-      console.log();
+      /** @type {string} */
+      let value = input.value;
+
+      // clear input after submitted.
+      input.value = "";
+
+      (async () => {
+        tempAddReply(await Whisper.ask(value));
+      })();
 
       return false;
     }

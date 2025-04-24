@@ -1,5 +1,7 @@
 ! version = 2.0
 
+// idea, find interesting words in text, make that a topic, maybe learn about it (that'd be hard to implement).
+
 + (@greeting)
 - hello.
 - greetings.
@@ -8,3 +10,26 @@
 
 + my name is *
 - hello, <star>
+
+
+// TODO : make this display feeling.
++ [(@greeting)] how are you
+- indifferent. i am not yet programmed with feelings. how are you?{topic=howareyou}
+
+> topic howareyou
+
+  + [i am] (@doinggood){weight=10}
+  - that is good. tell me more.{topic=howareyoutellmemore}
+
+
+  + *
+  - alright.{topic=random}
+
+< topic
+
+> topic howareyoutellmemore
+
+  + *
+  - this path is not written yet.{topic=random}
+
+< topic

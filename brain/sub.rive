@@ -16,9 +16,14 @@
 
 ! array askstate = does|is|do|are
 
-! array greeting = hey|heyo|hi|hai|greetings|hello
+! array greeting = hey|heyy|heyyy|heyo|heyoo|heyooo|hi|hii|hiii|hiiii|hai|haii|haiii|haiiii|greetings|hello|helloo|hellooo|helo|heloo
 
 ! array farewells = goodbye|farewell|cya|ciao|adios|bye
+
+! array doinggood = good|well|doing well|fine|fantastic|alright|okay|superb
+! array doingmid  = mid|meh
+
+! array coinflip = heads|tails
 
 // contractions . https://editorsmanual.com/articles/contractions-list/
 ! sub don't = do not

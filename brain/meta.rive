@@ -1,0 +1,45 @@
+! version = 2.0
+
++ [*] you keep [*] repeating yourself
+@ repeating yourself
+
++ [*] [you are] [*] repeating yourself
+- i understand. i have very limited knowledge.
+- then i think you'll find it would yield better results to ask better questions.
+- i apologize.
+- i am sorry.
+
++ test[ing]
+- check, check.{weight=90}
+- one two three.{weight=90}
+- 1 2 3.{weight=90}
+// https://www.cs.columbia.edu/~hgs/audio/harvard.html
+- the birch canoe slid on the smooth planks.
+- glue the sheet to the dark blue background.
+- it's easy to tell the depth of a well.
+- these days a chicken leg is a rare dish.
+- rice is often served in round bowls.
+- the box was thrown beside the parked truck.
+- the hogs were fed chopped corn and garbage.
+- four hours of steady work faced us.
+- a large size in stockings is hard to sell.
+- the boy was there when the sun rose.
+- a rod is used to catch pink salmon.
+- the source of the huge river is the clear spring.
+- kick the ball straight and follow through.
+
+
++ dime
+- quarter.
+
++ what
+- what? anyways.
+
++ (flip a coin|do a coin flip)
+- (@coinflip).
+- it's (@coinflip).
+- it is a (@coinflip).
+
++ query
+- yes, you can do that.
+- you can try doing that.
