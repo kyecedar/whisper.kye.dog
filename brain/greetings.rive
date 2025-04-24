@@ -1,0 +1,10 @@
+! version = 2.0
+
++ (@greeting)
+- hello.
+- greetings.
+- hello, creature.
+- hello, visitor.
+
++ my name is *
+- hello, <star>

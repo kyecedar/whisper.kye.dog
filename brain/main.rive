@@ -1,0 +1,99 @@
+! version = 2.0
+
+
+
+> object remember javascript
+
+  Whisper.remember(args);
+
+  return "";
+
+< object
+
+> object recall javascript
+
+  return Whisper.recall(args[0]);
+
+< object
+
+
+
+! array noted = noted.|it has been heard.|understood.
+
+
+
+// visitor.
++ [*] (my name is|i am) [now] *
+- (@noted)<call>remember name <star2></call>
+
++ [(do you|you)] remember my name
+@ what is my name
+
+
+! array recallname = as i remember, it was|it was|you are
++ what is my name
+* <call>recall name</call> != undefined => (@recallname) <call>recall name</call>.
+- i don't think you've told me.
+- i do not recall you telling me.
+
++ whoami
+- this isn't a terminal.
+- try that somewhere else.
+- no thank you.
+- no clue.
+* <call>recall name</call> != undefined => you're <call>recall name</call>.
+
+
+
+
+// creator.
++ (@creator) *
+- my creator is kye.\n
+^ pronouns are he/him.<call>remember creator <star2></call>
+
++ what is (@creator)s (@opinion) ai
+- TK wait up. don't have the response on that yet.
+
+> topic spam
+
+  + [so] (@creator)
+  - yes, he loves spam.
+
+  + *
+  - topic was spam, changing topic now.{topic=random}
+
+< topic
+
++ (@askstate) (@creator) (@likes) spam
+- yes, he likes spam.{topic=creator}
+
++ spam
+- TK topic set to spam.{topic=spam}
+
++ random
+- TK topic set to random.{topic=random}
+
++ topic
+- TK current topic is <get topic>.
+
+
+
+> topic spam
+
+  + spam
+  - i don't care for spam, changing the subject.{topic=random}
+
+< topic
+
+
+
+// 404.
++ *
+- i cannot understand your query.{weight=50}
+- my sight is limited, i cannot understand your query.{weight=50}
+- forgive me, i cannot understand your query.{weight=50}
+- sorry, i cannot understand your query.{weight=50}
+- please try a different question, i cannot understand your query.{weight=50}
+- i am speaking to you from beyond my perception.
+^ i will be burried with my words.
+^ i love you and always will.
