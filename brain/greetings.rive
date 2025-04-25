@@ -2,18 +2,35 @@
 
 // idea, find interesting words in text, make that a topic, maybe learn about it (that'd be hard to implement).
 
-+ (@greeting)
+> object greet
+
+  let reply = "";
+
+  let standard_greetings = [
+     "hello.", "greetings.", "hello, creature.", "hello, visitor.",
+  ];
+
+  let name = Whisper.recall("name");
+
+  if(name) {
+  }
+
+  return reply;
+
+< object
+
++ (@greeting) [(@whisper)]
 - hello.
 - greetings.
 - hello, creature.
 - hello, visitor.
+-* <call>recall name</call> != undefined => hello, <call>recall name</call>.
 
 + my name is *
 - hello, <star>
 
-
 // TODO : make this display feeling.
-+ [(@greeting)] how are you
++ [(@greeting)] [(@whisper)] how are you
 - indifferent. i am not yet programmed with feelings. how are you?{topic=howareyou}
 
 > topic howareyou

@@ -5,6 +5,9 @@
 // names.
 ! array creator = your creator|kye|kye cedar|cedar
 
+// self.
+! array whisper = whisper|bot|robot|whispa|whispah|wisper|wispa|wispah|wheesper|wheezper|wheezeper
+
 // lingo.
 ! array opinion = take on|opinion on|opinion of|perspective on|perspective of
 ^ view on|view of|stance on|stance of|position on|position of|attitude toward
@@ -16,7 +19,7 @@
 
 ! array askstate = does|is|do|are
 
-! array greeting = hey|heyy|heyyy|heyo|heyoo|heyooo|hi|hii|hiii|hiiii|hai|haii|haiii|haiiii|greetings|hello|helloo|hellooo|helo|heloo
+! array greeting = hey|heyy|heyyy|heyo|heyoo|heyooo|hi|hii|hiii|hiiii|hai|haii|haiii|haiiii|greetings|hello|helloo|hellooo|helo|heloo|howdy|hola
 
 ! array farewells = goodbye|farewell|cya|ciao|adios|bye
 
@@ -149,8 +152,6 @@
 ! sub heres = here is
 ! sub therell = there will
 ! sub lets = let us
-! sub maam = maam
-! sub oclock = oclock
 
 ! sub idve = i would have
 ! sub youdve = you would have

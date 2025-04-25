@@ -41,10 +41,18 @@
 
     Whisper.init(onready);
 
+    const tempAddQuery = (text) => {
+      let query = document.createElement("div");
+      query.classList.add("query");
+      query.innerText = `\\ ${text}`;
+
+      elem_replies.append(query);
+    };
+
     const tempAddReply = (text) => {
       let reply = document.createElement("div");
       reply.classList.add("reply");
-      reply.innerText = text;
+      reply.innerText = `${text}`;
 
       elem_replies.append(reply);
     };
@@ -52,9 +60,12 @@
     function handleInput() {
       /** @type {string} */
       let value = input.value;
+      if (value === "") return false;
 
       // clear input after submitted.
       input.value = "";
+
+      tempAddQuery(value);
 
       (async () => {
         tempAddReply(await Whisper.ask(value));
